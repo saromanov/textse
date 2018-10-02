@@ -35,4 +35,16 @@ impl Analyzer for RegexpAnalyzer {
         let re = Regex::new(self.text).unwrap();
         re.is_match(opt.Text)
     }
-} 
+}
+
+// WordAnalyzer implements analyzer for words
+// on text
+struct WordAnalyzer {
+    text:&str;
+}
+
+impl Analyzer for WordAnalyzer {
+    fn analyze(&self, opt:AnalyzerOptions) -> AnalyzerResult {
+       self.text.splitn(2, |x|x.to_lowercase()).unwrap()
+    }
+}
