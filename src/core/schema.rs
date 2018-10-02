@@ -7,6 +7,9 @@ pub struct Schema;
 impl Schema {
     fields: Vec<Field>;
     fileds_map: HashMap<String, Field>;
+    
+     // new provides crete of the new schema
+    // This is main method for create a new schema for indexing
     fn new() -> Schema {
         Schema{
             fields:: Vec::new(),
@@ -36,10 +39,9 @@ impl Schema {
         self.fileds_map.keys().to_vector()
     }
 
-    // create provides crete of the new schema
-    // This is main method for create a new schema for indexing
-    fn create() -> Schema {
-
+    // is_created checks if schema is created
+    fn is_created() -> bool {
+        true;
     }
 
     fn add_field(&self, f: Field) {
