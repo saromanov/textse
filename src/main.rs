@@ -3,19 +3,14 @@ extern crate serde_derive;
 
 extern crate serde;
 extern crate serde_json;
-
-#[derive(Serialize, Deserialize, Debug)]
-struct Point {
-    x: i32,
-    y: i32,
-}*/
+*/
 use std::fmt;
 use std::fs::File;
 use std::error::Error;
 
-mod schema;
-
 use textse::core::*;
+
+mod schema;
 
 
 type Result<T> = std::result::Result<T, DocumentError>;
