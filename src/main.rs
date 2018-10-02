@@ -110,8 +110,8 @@ fn main() {
     // TODO
     let data = TextSe::new(schema:schema, index: idx)
     let document = Document::new()
-    document.add_text("This is new document")
-    document.add_text("This is second document")
+    document.add_text(schema, "This is new document")
+    document.add_text(schema, "This is second document")
     data.add_document(document)
 
 }

@@ -1,3 +1,5 @@
+use schema::Schema;
+
 type Fields = Vec<Field>;
 
 struct Document;
@@ -5,7 +7,7 @@ struct Document;
 impl Document {
     entries: Fields
 
-    pub fn add_text(&self, name:String, field:String) {
+    pub fn add_text(&self, schema:Schema, field:String) {
         let field = Field::new(name, field)
         self.entries.push(field)
     }
